@@ -26,14 +26,17 @@ public class Friend implements Serializable {
     }
 
     public int getDrawableId() {
+
         return drawableId;
     }
 
     public float getRating() {
+
         return rating;
     }
 
     public void setRating(int rating) {
+
         this.rating = rating;
     }
 }
