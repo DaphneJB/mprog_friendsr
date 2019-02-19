@@ -26,10 +26,12 @@
     <TextView
         android:id="@+id/textName"
         android:layout_width="435dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="cursive"
         android:text="TextView"
         android:textAlignment="center"
-        android:layout_height="wrap_content" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textBio"

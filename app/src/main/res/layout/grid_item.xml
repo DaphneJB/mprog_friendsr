@@ -17,7 +17,7 @@
             android:id="@+id/profile"
             android:layout_width="130dp"
             android:layout_height="117dp"
-            app:srcCompat="@drawable/cersei" />
+            app:srcCompat="@drawable/cersei"/>
 
     </LinearLayout>
 
@@ -25,7 +25,9 @@
         android:id="@+id/text"
         android:layout_width="138dp"
         android:layout_height="wrap_content"
+        android:fontFamily="cursive"
         android:text="TextView"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
 </LinearLayout>
