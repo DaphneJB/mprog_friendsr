@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         FriendsAdapter adapter = new FriendsAdapter(this, R.layout.grid_item, friends);
         GridView view = findViewById(R.id.grid);
-        view.setOnItemClickListener(new ThisIsAnInnerClass());
+        view.setOnItemClickListener(new clickListener());
         view.setAdapter(adapter);
     }
 
-    private class ThisIsAnInnerClass implements AdapterView.OnItemClickListener {
+    private class clickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Friend clickedFriend = (Friend) parent.getItemAtPosition(position);
