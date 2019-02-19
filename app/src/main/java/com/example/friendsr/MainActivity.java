@@ -1,8 +1,10 @@
 package com.example.friendsr;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 
@@ -14,10 +16,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("arya " + R.id.arya);
 
         ArrayList<Friend> friends = new ArrayList<>();
-        friends.add(new Friend("Arya", "This is Arya Stark", getResources().getIdentifier("drawable/arya", "drawable",getPackageName())));
+        friends.add(new Friend("Arya", "This is Arya Stark", getResources().getIdentifier("drawable/arya", "drawable", getPackageName())));
         friends.add(new Friend("Cersei", "This is Cersei Baratheon", getResources().getIdentifier("drawable/cersei", "drawable", getPackageName())));
         friends.add(new Friend("Daenerys", "This is Daenerys Targaryen", getResources().getIdentifier("drawable/daenerys", "drawable", getPackageName())));
         friends.add(new Friend("Jaime", "This is Jaime Lannister", getResources().getIdentifier("drawable/jaime", "drawable", getPackageName())));
@@ -30,6 +31,19 @@ public class MainActivity extends AppCompatActivity {
 
         FriendsAdapter adapter = new FriendsAdapter(this, R.layout.grid_item, friends);
         GridView view = findViewById(R.id.grid);
+        view.setOnItemClickListener(new ThisIsAnInnerClass());
         view.setAdapter(adapter);
+    }
+
+    private class ThisIsAnInnerClass implements AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Friend clickedFriend = (Friend) parent.getItemAtPosition(position);
+            System.out.println("friend: " + clickedFriend.getName());
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            intent.putExtra("clicked_friend", clickedFriend);
+            startActivity(intent);
+
+        }
     }
 }

@@ -14,87 +14,18 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/cersei"
+            android:id="@+id/profile"
             android:layout_width="130dp"
             android:layout_height="117dp"
             app:srcCompat="@drawable/cersei" />
 
-        <ImageView
-            android:id="@+id/arya"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/arya" />
-
-        <ImageView
-            android:id="@+id/daenerys"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/daenerys" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="138dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/jon"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/jon" />
-
-        <ImageView
-            android:id="@+id/jaime"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/jaime" />
-
-        <ImageView
-            android:id="@+id/jorah"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/jorah" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/margaery"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/margaery" />
-
-        <ImageView
-            android:id="@+id/melisandre"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/melisandre" />
-
-        <ImageView
-            android:id="@+id/sansa"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/sansa" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/tyrion"
-            android:layout_width="130dp"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/tyrion" />
-    </LinearLayout>
+        android:text="TextView"
+        android:textAlignment="center" />
 
 </LinearLayout>
