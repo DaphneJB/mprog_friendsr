@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList<Friend> friends = new ArrayList<>();
+        //create the friends
         friends.add(new Friend("Arya", "This is Arya Stark", getResources().getIdentifier("drawable/arya", "drawable", getPackageName())));
         friends.add(new Friend("Cersei", "This is Cersei Baratheon", getResources().getIdentifier("drawable/cersei", "drawable", getPackageName())));
         friends.add(new Friend("Daenerys", "This is Daenerys Targaryen", getResources().getIdentifier("drawable/daenerys", "drawable", getPackageName())));
@@ -35,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
         view.setAdapter(adapter);
     }
 
+    //makes sure that the clicked friend will lead to the appropriate screen
     private class clickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Friend clickedFriend = (Friend) parent.getItemAtPosition(position);
-            System.out.println("friend: " + clickedFriend.getName());
             Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra("clicked_friend", clickedFriend);
             startActivity(intent);

@@ -1,20 +1,18 @@
 package com.example.friendsr;
 
 import java.io.Serializable;
+/* Represents a friend with a name, a bio and a profile pic */
 
 public class Friend implements Serializable {
     private String name, bio;
     private int drawableId;
     private float rating;
 
+    //creates a friend with a given name, bio and drawableId
     public Friend(String theName, String theBio, int aDrawableId) {
         name = theName;
         bio = theBio;
         drawableId = aDrawableId;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getName() {
